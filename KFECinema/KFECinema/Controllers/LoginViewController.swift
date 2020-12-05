@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  KFECinema
 //
-//  Created by Veerachamy, Vimal on 12/2/20.
+//  Created by Veerachamy, Vinod on 12/2/20.
 //
 
 import UIKit
