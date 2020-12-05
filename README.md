@@ -1,3 +1,1 @@
-# sampleApps
-# sampleApps
-# sampleApps
+Sample Swift Learning demo app
