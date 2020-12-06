@@ -4,7 +4,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,17 +28,54 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-ik-1Dw">
-                            <rect key="frame" x="70" y="20.5" width="41.5" height="19.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <rect key="frame" x="70" y="20.5" width="42.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHL-dN-6RO">
+                            <rect key="frame" x="264" y="15" width="120" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW ALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du0-dp-cmd">
+                                    <rect key="frame" x="31" y="7.5" width="58.5" height="15"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8C-Zm-tsE">
+                                    <rect key="frame" x="95" y="7.5" width="20" height="15"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="KcQ-hh-ou0"/>
+                                        <constraint firstAttribute="height" constant="20" id="Quk-Qq-J5s"/>
+                                    </constraints>
+                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="medium" renderingMode="original"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstItem="du0-dp-cmd" firstAttribute="centerY" secondItem="sHL-dN-6RO" secondAttribute="centerY" id="0ul-g3-Df4"/>
+                                <constraint firstAttribute="width" constant="120" id="1pq-Nx-b1N"/>
+                                <constraint firstItem="m8C-Zm-tsE" firstAttribute="centerY" secondItem="sHL-dN-6RO" secondAttribute="centerY" id="3SS-mY-3Yb"/>
+                                <constraint firstAttribute="trailing" secondItem="m8C-Zm-tsE" secondAttribute="trailing" constant="5" id="IIy-HW-4Pg"/>
+                                <constraint firstItem="du0-dp-cmd" firstAttribute="centerX" secondItem="sHL-dN-6RO" secondAttribute="centerX" id="Pf1-S1-Yja"/>
+                                <constraint firstAttribute="height" constant="30" id="fAi-1d-UDJ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="Jhb-ik-1Dw" firstAttribute="centerY" secondItem="QAF-kp-nrH" secondAttribute="centerY" id="92r-in-FlY"/>
                         <constraint firstItem="DUb-Fw-3Ce" firstAttribute="leading" secondItem="QAF-kp-nrH" secondAttribute="leading" constant="10" id="Db2-TT-zpr"/>
                         <constraint firstItem="DUb-Fw-3Ce" firstAttribute="centerY" secondItem="QAF-kp-nrH" secondAttribute="centerY" id="Ype-m0-fOD"/>
+                        <constraint firstAttribute="trailing" secondItem="sHL-dN-6RO" secondAttribute="trailing" constant="30" id="lgT-OL-Viw"/>
+                        <constraint firstItem="sHL-dN-6RO" firstAttribute="centerY" secondItem="QAF-kp-nrH" secondAttribute="centerY" id="mby-eo-fCY"/>
                         <constraint firstItem="Jhb-ik-1Dw" firstAttribute="leading" secondItem="DUb-Fw-3Ce" secondAttribute="trailing" constant="15" id="z4a-Yd-Q3L"/>
                     </constraints>
                 </view>
@@ -48,7 +87,13 @@
                 <outlet property="iconImgView" destination="DUb-Fw-3Ce" id="zZh-i7-a45"/>
                 <outlet property="titleLbl" destination="Jhb-ik-1Dw" id="EW0-B0-NAy"/>
             </connections>
-            <point key="canvasLocation" x="160.86956521739131" y="-118.19196428571428"/>
+            <point key="canvasLocation" x="160.86956521739131" y="-118.52678571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
