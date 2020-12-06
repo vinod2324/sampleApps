@@ -15,6 +15,26 @@ public class LoginViewController : UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    
+    @IBAction func loginBtnAction(_ sender: Any) {
+        
+        //Launch Default Home View
+        self.launchHomeView()
+    }
+    
+    
+    public func launchHomeView() {
+        
+        let storyboard = UIStoryboard.init(name: "TabbarStoryboard", bundle: nil)
+        let tabbarController = storyboard.instantiateInitialViewController()
+        
+        //Load TabbarController
+        if let viewController = tabbarController {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
 }
